@@ -21,13 +21,16 @@ const jugador = {
     nombre: "Luciano",
     apodo: "Lucho",
     apellido: "Rodriguez",
-    fechaDeNacimiento: "2003-07-16"
+    fechaDeNacimiento: "1995-12-28"
 }
 
-function edad(fechaDeNacimiento) {
-    const fechaNacimiento = new Date(fechaDeNacimiento);
+function edad(fechaNacimiento) {
+    const fechaNac = new Date(fechaNacimiento);
     const fechaActual = new Date();
-    const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+    let edad = fechaActual.getFullYear() - fechaNac.getFullYear();
+    if (fechaNac.getMonth() > fechaActual.getMonth() || (fechaNac.getMonth() === fechaActual.getMonth() && fechaNac.getDate() > fechaActual.getDate())) {
+        edad--;
+    }
     return edad;
 }
 
