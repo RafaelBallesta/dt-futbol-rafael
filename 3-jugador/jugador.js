@@ -16,4 +16,8 @@ const jugador = {
     apellido: "Rodriguez"
 }
 
-console.log(`${jugador.nombre} "${jugador.apodo}" ${jugador.apellido}`);
+function retornar () {
+    return `${jugador.nombre} "${jugador.apodo}" ${jugador.apellido}`;
+}   
+
+module.exports = { retornar };

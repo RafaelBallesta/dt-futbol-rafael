@@ -51,3 +51,10 @@ jugador.forEach(jugador => {
         console.log(`${jugador.nombre} "${jugador.apodo}" ${jugador.apellido} (${edad(jugador.fechaDeNacimiento)} años) - ${jugador.posicion}`);
     }
 });
+
+function retornarJuga() {
+    return jugador;
+}
+
+
+module.exports = { retornarJuga };
